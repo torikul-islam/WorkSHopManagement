@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="StudentMasterPage.master.cs" Inherits="UserInterface.Student.StudentMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+        <table width="100%">
+            <tr>
+                
+               <td height="150px" width="100%"> <asp:LinkButton ID="lnkBtnLogout" runat="server" OnClick="lnkBtnLogout_Click">Logout</asp:LinkButton>
+                   <asp:Label ID="lblWlcStudent" runat="server" Text="Label"></asp:Label>
+                    <asp:Menu ID="mStudent" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Arial" Orientation="Horizontal">
+                        <DynamicHoverStyle BackColor="#284E98" ForeColor="White"/>
+                        <DynamicMenuItemStyle  HorizontalPadding="5px" VerticalPadding="2px"/>
+                        <DynamicMenuStyle BackColor="#B5C7DE"/>
+                        <DynamicSelectedStyle BackColor="#507CD1" />
+                        
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Student/Home.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Student/Request.aspx" Text="Request" Value="Request"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Student/Workshop.aspx" Text="Workshop" Value="Workshop"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Student/Profile.aspx" Text="Profile" Value="Profile"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Student/Material.aspx" Text="Material" Value="Material"></asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="#284E98" ForeColor="White"/>
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticSelectedStyle BackColor="#507CD1" />
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td height="300px" width="100%">
+
+                         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                         </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+
+            <tr>
+                <td height="50px" width="100%">Footer
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
